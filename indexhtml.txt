@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Online Trgovina</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Početna</a></li>
+                <li><a href="#profile">Moj profil</a></li>
+                <li><a href="#settings">Postavke</a></li>
+                <li><a href="#about">O nama</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Dobrodošli u našu online trgovinu</h1>
+        <p>Ovdje možete pronaći najbolji asortiman proizvoda po povoljnim cijenama.</p>
+        <button id="shop-now">Kupuj odmah</button>
+    </section>
+
+    <section id="profile">
+        <h2>Moj profil</h2>
+        <p>Ovdje možete vidjeti i uređivati vaše podatke.</p>
+        <!-- Profil detalji -->
+    </section>
+
+    <section id="settings">
+        <h2>Postavke</h2>
+        <p>Postavite vašu preferenciju.</p>
+        <!-- Postavke detalji -->
+    </section>
+
+    <section id="about">
+        <h2>O nama</h2>
+        <p>Mi smo tim posvećen pružanju vrhunske usluge našim kupcima.</p>
+    </section>
+
+    <footer>
+        <form id="contact-form">
+            <h3>Kontaktirajte nas</h3>
+            <label for="name">Ime i prezime:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Adresa za dostavu:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="product">Proizvod:</label>
+            <input type="text" id="product" name="product" required>
+
+            <button type="submit">Pošalji narudžbu</button>
+        </form>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: #ff0000;
+    border-radius: 5px;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#home {
+    background-color: #ff0000;
+    color: #fff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#shop-now {
+    background-color: #fff;
+    color: #ff0000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#shop-now:hover {
+    background-color: #ffcccc;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+input, button {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4d4d;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+document.getElementById('shop-now').addEventListener('click', function() {
+    alert('Hvala što ste odabrali našu trgovinu!');
+});
+
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Narudžba je uspješno poslana!');
+});
